@@ -1,2 +1,9 @@
 // Popup boxes to display messages
-alert('Hello there! \n Am in new line');
+var c = confirm('Are you sure?');
+
+if(c) {
+	alert('You are sure');
+}
+else{
+	alert('You are not sure');
+}
