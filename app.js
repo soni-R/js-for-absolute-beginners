@@ -1,9 +1,5 @@
 // Popup boxes to display messages
-var c = confirm('Are you sure?');
+var name = prompt('Please enter your name');
 
-if(c) {
-	alert('You are sure');
-}
-else{
-	alert('You are not sure');
-}
+alert(name);
+
