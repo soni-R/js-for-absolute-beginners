@@ -1,63 +1,74 @@
-var number1 = 16,
-    number2 = 5,
-    number3 = 2
-	result = number1 + number2; // we can use all mathematical operators(+, -, *, /, %) in place of +.
-	console.log(result);
+// Array is like a datatype in javascript which stores a list of particular items with in it.(or)
+// arrays are used to store multiple values in a single variable.
 
-	result = (number1 + number2) / number3;
+var names = ['Alex', 'Billy', 'Dale'];
 
-	result = number1 % number2; // % results remainder
-	console.log(result); // outputs 1
+/* output in console
+names
+[]
+typeof names
+"object" */
 
-	// increments and decrements
+// Remove Billy
+names.splice(1, 1); //(1,1) first value specifies index and second one specifies how many elements we have to remove
 
-var number = 1;
-	 result = number++; //outputs 1
-	 console.log(result);
+// Add Joshua and Ashley
+names.push('Joshua', 'Ashley');
 
-var num =1;
-	 result = ++num; // outputs 2
-	 console.log(result);
+// Add Sheba
+names[4] = 'Sheba';
 
-var num2 = 1;
-	 result = num2--; // outputs 1
-	 console.log(result);
+// Change Dale to Billy
+names[1] = 'Billy';
 
-var num3 = 1;
-	 result = --num3; // outputs 0
-	 console.log(result);
+// Add named index to end of array
+names['color'] = 'Blue';
 
+console.log(names);
 
-var value = 1;
-	value= value + 1;  // same as ++value
-	console.log(value);
+var fruits = ['apple', 'orange', 'grapes', 100, 80, 65, {}]; //in arrays we can even store numbers and object (the curly braces represent object)
 
-var negvalue = -10;
-
-//in console
-// number
-// 2
-// -number
-// -2
-
-// negvalue
-// -10
-// -negvalue  //negation
-// 10
-
-var value2 ='20'; //value2 is a string types
-
-// value2
-// "20"
-// +value2 // +value2 converts string type value into integer
-// 20
-
-var value3 = 'Alex'; // string type
-
-// output in console
-// value3
+//accessing elements of array in console
+// names[0]
 // "Alex"
-// +value3 //  +value3 results NaN since value3 has string in it 
-// NaN
+// names[2]
+// "Dale"
 
+//changing Billy to sam(but this change in console will not affect the original code, as soon as we refresh page it sets back to original code)
+// names[1] = 'sam';
+// "sam"
+// names 
+// ["Alex", "sam", "Dale"]
 
+//to append new values
+// names
+// ["Alex", "Billy", "Dale"]
+// names[3] = 'john';
+// "john"
+// names
+// ["Alex", "Billy", "Dale", "john"]
+
+// names.push('ally');
+// 5 // .push returns number of elements in an array and insert the specified element
+// names
+// ["Alex", "Billy", "Dale", "john", "ally"]
+
+// names.splice(names, 1)  //.splice removes specified element
+// ["Alex"]
+// names
+// (4) ["Billy", "Dale", "john", "ally"]
+
+// names
+// (3) ["Alex", "Billy", "Dale"]
+// names.splice(1, 2)       // first value specifies index of the element to remove, second value specifies number of elements to remove from there
+// (2) ["Billy", "Dale"]
+// names
+// ["Alex"]  // remaining elements
+
+// names.push('sam');
+// names.push('marc');
+// names.push('sam' , 'marc'); // we can add any number of elements in single line
+
+// accessing named index
+// names.color
+// "Blue"
